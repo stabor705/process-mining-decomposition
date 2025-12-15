@@ -1,0 +1,37 @@
+# Base project configuration for the decomposer package
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decomposer"
+version = "0.1.0"
+description = "Process mining decomposition utilities"
+readme = "../README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [
+	{ name = "stabor705" }
+]
+keywords = ["process-mining", "decomposition", "event-logs"]
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+	"Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas>=2.3.3",
+    "pm4py>=2.7.19.2",
+	"networkx>=2.8",
+	"python-louvain>=0.16",
+	"matplotlib>=3.8"
+]
+
+# Uncomment and adjust if you want a CLI entry point
+[project.scripts]
+decomposer = "decomposer.decomposer:main"
+
+[project.urls]
+Homepage = "https://github.com/stabor705/process-mining-decomposition"
+Repository = "https://github.com/stabor705/process-mining-decomposition"
